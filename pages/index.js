@@ -1,10 +1,26 @@
-import Head from 'next/head'
-import Link from "next/link";
+import React from "react";
+import Layout from "@common/components/Layout";
 
-export default function Home() {
+const HomePage = ({ products }) => {
+  const { list } = products;
   return (
-    <>
-      
-    </>
-  )
+    <Layout>
+        {list.map((list) => {
+          return <p>{list.name}</p>;
+        })}
+    </Layout>
+  );
+};
+
+export async function getStaticProps() {
+  const res = await fetch(`http://localhost:3000/api/products`);
+  const products = await res.json();
+
+  return {
+    props: {
+      products,
+    },
+  };
 }
+
+export default HomePage;
