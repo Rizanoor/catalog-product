@@ -4,11 +4,12 @@ import Layout from "@common/components/Layout";
 const HomePage = ({ products }) => {
   const { list } = products;
   return (
-    <Layout>
+    <div>
         {list.map((list) => {
-          return <p>{list.name}</p>;
+          return <p key={list.id}>
+            {list.name}</p>;
         })}
-    </Layout>
+    </div>
   );
 };
 
