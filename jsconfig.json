@@ -2,21 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@server/*": [
+        "modules/server/*"
+      ],
       "@common/*": [
         "modules/common/*"
-      ],
-      "@desktop/*": [
-        "modules/desktop/*"
       ],
       "@mobile/*": [
         "modules/mobile/*"
       ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@server/*": [
-        "modules/server/*"
-      ]
     }
   }
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles, } from "@material-ui/core";
 import PropTypes from 'prop-types';
 
+import MobileHeader from '@mobile/components/Header'
+
 const useStyles = makeStyles({
   content: {
     marginTop: 74,
@@ -11,8 +13,9 @@ const useStyles = makeStyles({
 const Layout = ({ children }) => {
   const classes = useStyles()
 
-  retun (
+  return (
     <React.Fragment>
+      <MobileHeader />
       <div className={classes.content}>
           {children}
       </div>
