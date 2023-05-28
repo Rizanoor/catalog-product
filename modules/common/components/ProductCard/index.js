@@ -9,6 +9,8 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
+import PromoLabel from "@common/components/PromoLabel";
+
 const useStyles = makeStyles({
   card: {
     maxWidth: 360,
@@ -41,18 +43,20 @@ const ProductCard = ({ img, title, promoLabel, price, rating, sold, productID })
     <Card className={classes.card}>
       <div className={classes.relative}>
         <CardMedia className={classes.image} image={img} title={title} />
-
-        <CardContent className={classes.cardContent}>
-          <Grid container direction="column">
-            <Typography gutterBottom variant="subtitle2" component="h2">
-              {title}
-            </Typography>
-            <Typography variant="overline" className={classes.price}>
-              {price}
-            </Typography>
-          </Grid>
-        </CardContent>
+        <div className={classes.promoLabel}>
+          <PromoLabel promoLabel={promoLabel} />
+        </div>
       </div>
+      <CardContent className={classes.cardContent}>
+        <Grid container direction="column">
+          <Typography gutterBottom variant="subtitle2" component="h2">
+            {title}
+          </Typography>
+          <Typography variant="overline" className={classes.price}>
+            {price}
+          </Typography>
+        </Grid>
+      </CardContent>
     </Card>
   );
 };
