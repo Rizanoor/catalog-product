@@ -11,6 +11,12 @@
       "@mobile/*": [
         "modules/mobile/*"
       ],
+      "@desktop/*": [
+        "modules/desktop/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
     }
   }
 }
