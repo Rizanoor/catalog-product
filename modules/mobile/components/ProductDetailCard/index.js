@@ -15,6 +15,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import ProductRating from "@common/components/ProductRating";
+import PromoCard from '@common/components/PromoCard';
 
 import { currencyFormatter } from "@utils/currency";
 import theme from "theme";
@@ -137,7 +138,8 @@ const ProductDetailCard = ({ img, title, price, rating, sold, description, quant
         </Collapse>
 
       </Card>
-      
+      <PromoCard promo={promo} />
+
     </div>
   );
 };
